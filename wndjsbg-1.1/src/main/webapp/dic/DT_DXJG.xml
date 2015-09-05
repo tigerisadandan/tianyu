@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<DATA>
+  <R c="1" t="框架" s="DT_DXJG" a="" l="2"/>
+  <R c="10" t="板柱抗震墙" s="DT_DXJG" a="" l="2"/>
+  <R c="11" t="部分框支抗震墙" s="DT_DXJG" a="" l="2"/>
+  <R c="12" t="木结构" s="DT_DXJG" a="" l="2"/>
+  <R c="2" t="砖混" s="DT_DXJG" a="" l="2"/>
+  <R c="3" t="框架--抗震墙" s="DT_DXJG" a="" l="2"/>
+  <R c="4" t="抗震墙" s="DT_DXJG" a="" l="2"/>
+  <R c="5" t="简体" s="DT_DXJG" a="" l="2"/>
+  <R c="6" t="框混" s="DT_DXJG" a="" l="2"/>
+  <R c="7" t="排架" s="DT_DXJG" a="" l="2"/>
+  <R c="8" t="钢结构" s="DT_DXJG" a="" l="2"/>
+  <R c="9" t="钢混" s="DT_DXJG" a="" l="2"/>
+</DATA>

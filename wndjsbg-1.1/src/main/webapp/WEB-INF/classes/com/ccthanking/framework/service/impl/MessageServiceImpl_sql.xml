@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <entry key="find"><![CDATA[ sqlString ]]></entry>
+  <entry key="find"><![CDATA[ sqlString ]]></entry>
+  <entry key="remove"><![CDATA[ sqlString ]]></entry>
+  <entry key="remove"><![CDATA[ sqlString ]]></entry>
+  <entry key="getMessage_messages"><![CDATA[ select TITLE,CONTENT from  fs_message_info where USERTO = '${userid}' and STATE = '1' and rownum<=5 order by OPTIME desc ]]></entry>
+  <entry key="getMessage_mcount"><![CDATA[ select count(1) from  fs_message_info where USERTO = '${userid}' and STATE = '1' ]]></entry>
+  <entry key="insert"><![CDATA[ sqlString ]]></entry>
+  <entry key="update"><![CDATA[ sqlString ]]></entry>
+  <entry key="findById"><![CDATA[ sqlString ]]></entry>
+  <entry key="getUserMessage"><![CDATA[ select opid, userfrom, userfromname, userto, usertoname, title, content, optime, sysmessage, emailmessage, smsmessage, deloper, deltime, state, accessory, linkurl, sjbh, ywlx from FS_MESSAGE_INFO ]]></entry>
+  <entry key="changeZt"><![CDATA[ sqlString ]]></entry>
+</properties>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<DATA>
+  <R c="1" t="住宅" s="DT_UNITS_TYPE" a="" l="2"/>
+  <R c="2" t="公共建筑" s="DT_UNITS_TYPE" a="" l="2"/>
+  <R c="3" t="厂房" s="DT_UNITS_TYPE" a="" l="2"/>
+  <R c="4" t="构筑物" s="DT_UNITS_TYPE" a="" l="2"/>
+  <R c="5" t="人防设施" s="DT_UNITS_TYPE" a="" l="2"/>
+</DATA>

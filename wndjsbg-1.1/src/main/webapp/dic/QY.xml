@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<DATA>
+  <R c="GXA" t="高新A区" s="GXA" a="" l="1"/>
+  <R c="GXB" t="高新B区" s="GXB" a="" l="1"/>
+  <R c="GXC" t="高新C区" s="GXC" a="" l="1"/>
+  <R c="HS" t="鸿山街道" s="HS" a="" l="1"/>
+  <R c="JX" t="江溪街道" s="JX" a="" l="1"/>
+  <R c="KG" t="空港园（硕放街道）" s="KG" a="" l="1"/>
+  <R c="MC" t="梅村街道" s="MC" a="" l="1"/>
+  <R c="TK" t="太科园（新安街道）" s="TK" a="" l="1"/>
+  <R c="WZ" t="旺庄街道" s="WZ" a="" l="1"/>
+</DATA>

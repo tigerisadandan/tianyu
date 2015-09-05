@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<DATA>
+  <R c="admin" t="后台管理系统" s="HTGLXT" a="" l="1"/>
+  <R c="wndjsbg" t="办公系统" s="NGXT" a="" l="1"/>
+  <R c="wndjsgd" t="工地子系统" s="GDZXT" a="" l="1"/>
+  <R c="wndjsjs" t="建设系统" s="JSXT" a="" l="1"/>
+  <R c="wndjssg" t="施工企业信用系统" s="SGQYXYXT" a="" l="1"/>
+  <R c="wndjswx" t="微信公众平台" s="WXXT" a="" l="1"/>
+</DATA>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+<config_file/>
+<webAppRootKey>wndjsbg.root</webAppRootKey>
+<PAGE_SG_ENTER_REG>jsp/business/sg/sg-enterPrise-add</PAGE_SG_ENTER_REG>
+<PAGE_SG_PERSON_ADD>jsp/business/person_manager/person_add</PAGE_SG_PERSON_ADD>
+<PAGE_SG_PERSON_DETAIL>jsp/business/person_manager/person_detail_message</PAGE_SG_PERSON_DETAIL>
+<DATA_FUJIAN_SHOW>jsp/business/commons/showFiles</DATA_FUJIAN_SHOW>
+<PAGE_SGBB_ADD>jsp/business/person_manager/person_add</PAGE_SGBB_ADD>
+<PAGE_SGBB_ADD_ONE>jsp/business/person_manager/person_add_one</PAGE_SGBB_ADD_ONE>
+<PAGE_SG_REG_RS_SHOW>jsp/business/commons/showCompanyList</PAGE_SG_REG_RS_SHOW>
+<PAGE_SG_ENTER_EDIT>jsp/business/sg/sg-enterPrise-edit</PAGE_SG_ENTER_EDIT>
+<PAGE_SG_ENTER_VIEW>jsp/business/sg/sg-enterPrise-view</PAGE_SG_ENTER_VIEW>
+<PAGE_SG_ENTER_EDIT_RK>jsp/business/sg/sg-enterPrise-edit-rk</PAGE_SG_ENTER_EDIT_RK>
+<PAGE_SG_ENTER_EDIT_QUEREN>jsp/business/sg/sg-enterPrise-queren</PAGE_SG_ENTER_EDIT_QUEREN>
+<PAGE_SG_ENTER_SCORE>jsp/business/sg/sg-score-view</PAGE_SG_ENTER_SCORE>
+<PAGE_SG_ENTER_ONSP>jsp/business/sg-moni/sgqy-view</PAGE_SG_ENTER_ONSP>
+<PAGE_SG_ENTER_REG_BEFORE>jsp/business/sg/befroe-register</PAGE_SG_ENTER_REG_BEFORE>
+<PAGE_SGENTERPRISE_SHENPIINFO>jsp/business/commons/showMessage</PAGE_SGENTERPRISE_SHENPIINFO>
+<PAGE_SGENTERPRISE_SHENPI>jsp/business/sg/sg-enterPrise-approval</PAGE_SGENTERPRISE_SHENPI>
+<PAGE_SGENTERPRISE_XIUGAI>jsp/business/sg/sg-enterPrise-add</PAGE_SGENTERPRISE_XIUGAI>
+<PAGE_SGBBXX_ADD>jsp/business/sgbb/sgbb-add</PAGE_SGBBXX_ADD>
+<PAGE_SGBBXX_EDIT>jsp/business/sgbb/sgbb-edit</PAGE_SGBBXX_EDIT>
+<PAGE_SGBBXX_VIEW>jsp/business/sgbb/sgbb-view</PAGE_SGBBXX_VIEW>
+<PAGE_SG_OUTER_TB>jsp/business/sg/outer-index-rk</PAGE_SG_OUTER_TB>
+<PAGE_SG_OUTER_LIST>jsp/business/sg/xyfgs</PAGE_SG_OUTER_LIST>
+<PAGE_SPYW_YWXX_ADD>jsp/business/spxx/spxx-add</PAGE_SPYW_YWXX_ADD>
+<PAGE_SPYW_YWXX_VIEW>jsp/business/spxx/spxx-view</PAGE_SPYW_YWXX_VIEW>
+<PAGE_SPYW_YWXX_LAYER>jsp/business/spxx/spxx-layer</PAGE_SPYW_YWXX_LAYER>
+
+<PAGE_SG_PERSON_SUODING>jsp/business/person_manager/suoding</PAGE_SG_PERSON_SUODING>
+<!-- 106 -->
+ <!--<PATH_TEMPLATE_WORD>D:\\Users\\Administrator\\Desktop\\wmdjs-vo\\src\\main\\resources\\template\\bzwj\\</PATH_TEMPLATE_WORD>
+  <PATH_TEMPLATE_XML>D:\\Users\\Administrator\\Desktop\\wmdjs-vo\\src\\main\\resources\\template\\xml\\</PATH_TEMPLATE_XML>
+--><!-- xt2 path 
+ <PATH_TEMPLATE_WORD>D:\\java\\config_folder\\wndjs-vo\\src\\main\\resources\\template\\bzwj\\</PATH_TEMPLATE_WORD>
+  <PATH_TEMPLATE_XML>D:\\java\\config_folder\\wndjs-vo\\src\\main\\resources\\template\\xml\\</PATH_TEMPLATE_XML>-->
+\\
+<PATH_TEMPLATE_BZWJ_WORD>D:\\mycompany\\wndjs-vo\\src\\main\\resources\\template\\bzwj\\</PATH_TEMPLATE_BZWJ_WORD>
+<!-- 
+<PATH_TEMPLATE_WORD>E:\\myeclipseDemo\\wndjs-vo\\src\\main\\resources\\template\\word\\</PATH_TEMPLATE_WORD> 
+<PATH_TEMPLATE_XML>E:\\myeclipseDemo\\wndjs-vo\\src\\main\\resources\\template\\xml\\</PATH_TEMPLATE_XML>
+ -->
+<PATH_TEMPLATE_WORD>D:\mycompany\wndjs-vo\src\main\resources\template\jxsb\</PATH_TEMPLATE_WORD>
+<PATH_TEMPLATE_XML>D:\mycompany\wndjs-vo\src\main\resources\template\xml\</PATH_TEMPLATE_XML>
+
+<template_word_azgz>《无锡市新区建筑施工起重机械设备安装告知表》</template_word_azgz>
+<template_word_sydj>无锡市新区建筑施工起重机械设备使用登记申报表</template_word_sydj>
+<template_word_cxgz>无锡市新区建筑施工起重机械设备拆卸告知表</template_word_cxgz>
+<template_word_azgc>起重设备安装过程管理表</template_word_azgc>
+<template_word_jcys>起重设备检测管理表</template_word_jcys>
+<template_word_cxgc>起重设备拆卸过程管理表</template_word_cxgc>
+<template_word_djz>使用登记证</template_word_djz>
+
+
+
+<PAGE_SP_ZZHYDJ_ADD>jsp/business/sp/zzhydj-add</PAGE_SP_ZZHYDJ_ADD>
+<PAGE_SP_ZZHYDJ_UPDATE>jsp/business/sp/zzhydj-add</PAGE_SP_ZZHYDJ_UPDATE>
+<PAGE_SP_ZZHYDJ_VIEW>jsp/business/sp/zzhydj-view</PAGE_SP_ZZHYDJ_VIEW>
+
+<PAGE_SP_JSXMKZSJPSSQ_ADD>jsp/business/sp/bu-spyw-jsxmkzsjpssq-add</PAGE_SP_JSXMKZSJPSSQ_ADD>
+<PAGE_SP_JSXMKZSJPSSQ_UPDATE>jsp/business/sp/bu-spyw-jsxmkzsjpssq-add</PAGE_SP_JSXMKZSJPSSQ_UPDATE>
+<PAGE_SP_JSXMKZSJPSSQ_VIEW>jsp/business/sp/bu-spyw-jsxmkzsjpssq-view</PAGE_SP_JSXMKZSJPSSQ_VIEW>
+
+<PAGE_SP_JSGCAQZLJDSBGZCNS_ADD>jsp/business/sp/bu_spyw_jsgcaqzljdsbgzcns-add</PAGE_SP_JSGCAQZLJDSBGZCNS_ADD>
+<PAGE_SP_JSGCAQZLJDSBGZCNS_UPDATE>jsp/business/sp/bu_spyw_jsgcaqzljdsbgzcns-add</PAGE_SP_JSGCAQZLJDSBGZCNS_UPDATE>
+<PAGE_SP_JSGCAQZLJDSBGZCNS_VIEW>jsp/business/sp/bu_spyw_jsgcaqzljdsbgzcns-view</PAGE_SP_JSGCAQZLJDSBGZCNS_VIEW>
+
+<PAGE_SP_CSPSXKZSQ_ADD>jsp/business/sp/Bu_Spyw_Cspsxkzsq-add</PAGE_SP_CSPSXKZSQ_ADD>
+<PAGE_SP_CSPSXKZSQ_UPDATE>jsp/business/sp/Bu_Spyw_Cspsxkzsq-add</PAGE_SP_CSPSXKZSQ_UPDATE>
+<PAGE_SP_CSPSXKZSQ_VIEW>jsp/business/sp/Bu_Spyw_Cspsxkzsq-view</PAGE_SP_CSPSXKZSQ_VIEW>
+
+<PAGE_SP_JGYSBA_ADD>jsp/business/sp/bu_spyw_jgysba-add</PAGE_SP_JGYSBA_ADD>
+<PAGE_SP_JGYSBA_UPDATE>jsp/business/sp/bu_spyw_jgysba-add</PAGE_SP_JGYSBA_UPDATE>
+<PAGE_SP_JGYSBA_VIEW>jsp/business/sp/bu_spyw_jgysba-view</PAGE_SP_JGYSBA_VIEW>
+
+<!-- 步骤文件 -->
+<!--  建设 9 建设3下的文件 三产项目面积核算单 -->
+<PAGE_SP_SCXMMJHSD_ADD>jsp/business/sp/Bu_Spyw_Scxmmjhsd-add</PAGE_SP_SCXMMJHSD_ADD>
+<PAGE_SP_SCXMMJHSD_VIEW>jsp/business/sp/Bu_Spyw_Scxmmjhsd-view</PAGE_SP_SCXMMJHSD_VIEW>
+<PAGE_SP_SCXMMJHSD_UPDATE>jsp/business/sp/Bu_Spyw_Scxmmjhsd-add</PAGE_SP_SCXMMJHSD_UPDATE>
+<PAGE_SP_SCXMMJHSD_VIEW>jsp/business/sp/Bu_Spyw_Scxmmjhsd-add</PAGE_SP_SCXMMJHSD_VIEW>
+<!-- 建设 8 征收 步骤1 打印文件 BU_SPYW_QGJJZSJFTSPSX_QGSFTZD -->
+<PAGE_SP_QGJJZSJFTSPSX_QGSFTZD_ADD>jsp/business/bzwj/bu_spyw_qgjjzsjftspsx_qgsftzd-add</PAGE_SP_QGJJZSJFTSPSX_QGSFTZD_ADD>
+<PAGE_SP_QGJJZSJFTSPSX_QGSFTZD_VIEW>jsp/business/bzwj/bu_spyw_qgjjzsjftspsx_qgsftzd-view</PAGE_SP_QGJJZSJFTSPSX_QGSFTZD_VIEW>
+<PAGE_SP_QGJJZSJFTSPSX_QGSFTZD_UPDATE>jsp/business/bzwj/bu_spyw_qgjjzsjftspsx_qgsftzd-add</PAGE_SP_QGJJZSJFTSPSX_QGSFTZD_UPDATE>
+<PAGE_SP_QGJJZSJFTSPSX_QGSFTZD_VIEW>jsp/business/bzwj/bu_spyw_qgjjzsjftspsx_qgsftzd-add</PAGE_SP_QGJJZSJFTSPSX_QGSFTZD_VIEW>
+<!-- 建设 3  步骤3 文件   十、交易服务费收费 -->
+<PAGE_SP_JYFWFSF_JSGCJKTZD_ADD>jsp/business/bzwj/bu_spyw_jyfwfsf_jsgcjktzd-add</PAGE_SP_JYFWFSF_JSGCJKTZD_ADD>
+<PAGE_SP_JYFWFSF_JSGCJKTZD_VIEW>jsp/business/bzwj/bu_spyw_jyfwfsf_jsgcjktzd-view</PAGE_SP_JYFWFSF_JSGCJKTZD_VIEW>
+<PAGE_SP_JYFWFSF_JSGCJKTZD_UPDATE>jsp/business/bzwj/bu_spyw_jyfwfsf_jsgcjktzd-add</PAGE_SP_JYFWFSF_JSGCJKTZD_UPDATE>
+<PAGE_SP_JYFWFSF_JSGCJKTZD_VIEW>jsp/business/bzwj/bu_spyw_jyfwfsf_jsgcjktzd-add</PAGE_SP_JYFWFSF_JSGCJKTZD_VIEW>
+
+
+
+<template_word_js_01>《建设工程勘察、设计单位资质核验登记表》</template_word_js_01>
+<template_word_js_02>《新区建设项目扩初评审申请表》</template_word_js_02>
+<template_word_js_04>无锡新区建设工程安全监督、质量监督告知承诺书</template_word_js_04>
+<template_word_js_06>《房屋建筑工程和市政基础设施工程竣工验收备案表》</template_word_js_06>
+<template_word_js_17>城市排水许可申请表</template_word_js_17>
+<template_word_js_18>燃气供应许可证申请表</template_word_js_18>
+
+
+<template_word_js_09>《三产项目面积核算单》</template_word_js_09>
+<!-- 曹伟杰添加 -->
+<template_word_js_03>无锡新区房屋建筑和市政基础设施施工工程直接发包初步方案审批表</template_word_js_03>
+<template_word_js_032>无锡新区监理工程直接发包初步方案审批表</template_word_js_032>
+<template_word_js_14>无锡新区城市排水方案预审申请表</template_word_js_14>
+<template_word_js_13>建设工程企业资质申报企业业绩核查汇总表</template_word_js_13>
+<template_word_js_15>无锡新区排水施工图审查申请表</template_word_js_15>
+<template_word_js_16>雨、污水接入管网（土建环保验收）申请表</template_word_js_16>
+<template_word_js_05>新区建筑工程施工许可证申请表</template_word_js_05>
+<template_word_js_07>无锡市新区商品房交付使用竣工验收申请表</template_word_js_07>
+<template_word_js_07_02>无锡新区商品房交付使用竣工验收项目情况表</template_word_js_07_02>
+<template_word_js_08>无锡新区新型墙体材料专项基金返退申请表</template_word_js_08>
+
+<template_word_hb_01_2>建设项目环境影响登记表告知承诺备案--工业类</template_word_hb_01_2>
+<template_word_hb_01_3>建设项目环境影响登记表告知承诺备案--区域开发及其他类</template_word_hb_01_3>
+<template_word_hb_01_4>建设项目环境影响登记表告知承诺备案--饮食娱乐服务类</template_word_hb_01_4>
+<template_word_hb_02_2>建设项目环境影响评价报告表（书）审批--工业类</template_word_hb_02_2>
+<template_word_hb_02_3>建设项目环境影响评价报告表（书）审批--区域开发及其他类</template_word_hb_02_3>
+<template_word_hb_02_4>建设项目环境影响评价报告表（书）审批--饮食娱乐服务类</template_word_hb_02_4>
+
+<template_word_jl_01>无锡新区建设工程现场监理部关键岗位人员配备表</template_word_jl_01>
+
+<DATA_SYNC_SGENTERPRISE>false</DATA_SYNC_SGENTERPRISE>
+<DATA_SYNC_SGBB>false</DATA_SYNC_SGBB>
+<DATA_SGRY_PERSON>false</DATA_SGRY_PERSON>
+
+<PAGE_SPYW_YWLZ_INDEX>jsp/business/ywlz/bu-sp-ywlzsp-index</PAGE_SPYW_YWLZ_INDEX>
+
+<FILEUPLOADOLD_ROOT>FILEUPLOADOLD_ROOT</FILEUPLOADOLD_ROOT>
+<FILEUPLOADOLD_ROOT_WNDJSJS>FILEUPLOADOLD_ROOT_WNDJSJS</FILEUPLOADOLD_ROOT_WNDJSJS>
+
+<PAGE_SPYW_PSSGT_ADD>jsp/business/sp/psSgtscsq-add</PAGE_SPYW_PSSGT_ADD>
+<PAGE_SPYW_PSSGT_VIEW>jsp/business/sp/psSgtscsq-view</PAGE_SPYW_PSSGT_VIEW>
+<PAGE_SPYW_XXQTCLZXJJFTSQ_ADD>jsp/business/sp/bu_spyw_xqxxqtclzxjjftsq-add</PAGE_SPYW_XXQTCLZXJJFTSQ_ADD>
+<PAGE_SPYW_XXQTCLZXJJFTSQ_VIEW>jsp/business/sp/bu_spyw_xqxxqtclzxjjftsq-view</PAGE_SPYW_XXQTCLZXJJFTSQ_VIEW>
+<PAGE_SPYW_PSFAYS_ADD>jsp/business/sp/psFayssq-add</PAGE_SPYW_PSFAYS_ADD>
+<PAGE_SPYW_PSFAYS_VIEW>jsp/business/sp/psFayssq-view</PAGE_SPYW_PSFAYS_VIEW>
+<PAGE_SPYW_JSGCSGXK_ADD>jsp/business/sp/sgxkzSqb-add</PAGE_SPYW_JSGCSGXK_ADD>
+<PAGE_SPYW_JSGCSGXK_VIEW>jsp/business/sp/sgxkzSqb-view</PAGE_SPYW_JSGCSGXK_VIEW>
+<PAGE_SPYW_SPFJFSYYSSQ_ADD>jsp/business/sp/spfJfsyJgysSq-add</PAGE_SPYW_SPFJFSYYSSQ_ADD>
+<PAGE_SPYW_SPFJFSYYSSQ_VIEW>jsp/business/sp/spfJfsyJgysSq-view</PAGE_SPYW_SPFJFSYYSSQ_VIEW>
+<PAGE_SPYW_SPFJFSYJGYSXMQK_ADD>jsp/business/sp/bu_spyw_spfjfsyjgysxmqk-add</PAGE_SPYW_SPFJFSYJGYSXMQK_ADD>
+<PAGE_SPYW_SPFJFSYJGYSXMQK_VIEW>jsp/business/sp/bu_spyw_spfjfsyjgysxmqk-view</PAGE_SPYW_SPFJFSYJGYSXMQK_VIEW>
+<PAGE_SPYW_YWSRWSQ_ADD>jsp/business/sp/ywsRwsq-add</PAGE_SPYW_YWSRWSQ_ADD>
+<PAGE_SPYW_YWSRWSQ_VIEW>jsp/business/sp/ywsRwsq-view</PAGE_SPYW_YWSRWSQ_VIEW>
+<PAGE_SPYW_RQGYXKZ_SQ_ADD>jsp/business/sp/bu_spyw_rqgyxkz_sq-add</PAGE_SPYW_RQGYXKZ_SQ_ADD>
+<PAGE_SPYW_RQGYXKZ_SQ_VIEW>jsp/business/sp/bu_spyw_rqgyxkz_sq-view</PAGE_SPYW_RQGYXKZ_SQ_VIEW>
+<PAGE_SPYW_SGQYYJHCSX_ADD>jsp/business/sp/bu_spyw_sgqyyjhcsx_qyyjhchz-add</PAGE_SPYW_SGQYYJHCSX_ADD>
+<PAGE_SPYW_SGQYYJHCSX_VIEW>jsp/business/sp/bu_spyw_sgqyyjhcsx_qyyjhchz-view</PAGE_SPYW_SGQYYJHCSX_VIEW>
+
+
+<PAGE_SPYW_GZCNBA_GY_ADD>jsp/business/sp/hjyxDjgzCns-add</PAGE_SPYW_GZCNBA_GY_ADD>
+<PAGE_SPYW_GZCNBA_GY_VIEW>jsp/business/sp/hjyxDjgzCns-view</PAGE_SPYW_GZCNBA_GY_VIEW>
+<PAGE_SPYW_GZCNBA_QYKF_ADD>jsp/business/sp/hjyxDjgzCns2-add</PAGE_SPYW_GZCNBA_QYKF_ADD>
+<PAGE_SPYW_GZCNBA_QYKF_VIEW>jsp/business/sp/hjyxDjgzCns2-view</PAGE_SPYW_GZCNBA_QYKF_VIEW>
+<PAGE_SPYW_GZCNBA_YSYL_ADD>jsp/business/sp/hjyxDjgzCns3-add</PAGE_SPYW_GZCNBA_YSYL_ADD>
+<PAGE_SPYW_GZCNBA_YSYL_VIEW>jsp/business/sp/hjyxDjgzCns3-view</PAGE_SPYW_GZCNBA_YSYL_VIEW>
+
+<PAGE_SPYW_HJYXPJ_GY_ADD>jsp/business/sp/hjyxDjgzCnsSp-add</PAGE_SPYW_HJYXPJ_GY_ADD>
+<PAGE_SPYW_HJYXPJ_GY_VIEW>jsp/business/sp/hjyxDjgzCnsSp-view</PAGE_SPYW_HJYXPJ_GY_VIEW>
+<PAGE_SPYW_HJYXPJ_QYKF_ADD>jsp/business/sp/hjyxDjgzCns2Sp-add</PAGE_SPYW_HJYXPJ_QYKF_ADD>
+<PAGE_SPYW_HJYXPJ_QYKF_VIEW>jsp/business/sp/hjyxDjgzCns2Sp-view</PAGE_SPYW_HJYXPJ_QYKF_VIEW>
+<PAGE_SPYW_HJYXPJ_YSYL_ADD>jsp/business/sp/hjyxDjgzCns3Sp-add</PAGE_SPYW_HJYXPJ_YSYL_ADD>
+<PAGE_SPYW_HJYXPJ_YSYL_VIEW>jsp/business/sp/hjyxDjgzCns3Sp-view</PAGE_SPYW_HJYXPJ_YSYL_VIEW>
+
+<PAGE_SPYW_CBFASP_ADD>jsp/business/sp/cbfasp-add</PAGE_SPYW_CBFASP_ADD>
+<PAGE_SPYW_CBFASP_VIEW>jsp/business/sp/cbfasp-view</PAGE_SPYW_CBFASP_VIEW>
+
+<PAGE_SPYW_CBFASP2_ADD>jsp/business/sp/cbfasp2-add</PAGE_SPYW_CBFASP2_ADD>
+<PAGE_SPYW_CBFASP2_VIEW>jsp/business/sp/cbfasp2-view</PAGE_SPYW_CBFASP2_VIEW>
+
+<DEV_FLAG>true</DEV_FLAG>
+
+<MSG_DWR_FLAG>true</MSG_DWR_FLAG>
+<MEMCACHE_SERVER_CREATE_FLAG>false</MEMCACHE_SERVER_CREATE_FLAG>
+
+<BROWSER_ERROR>
+<![CDATA[
+当前浏览器版本会影响功能使用,请使用推荐的浏览器使用本系统!
+]]>
+</BROWSER_ERROR>
+
+<BROWSER_ALTER><![CDATA[
+<div style="color: yellow;text-align: right;">本系统推茬使用 Chrome、IE10及以上[非兼容模式]、搜狗等浏览器</div>
+]]></BROWSER_ALTER>
+
+<SCROLLNEWS><![CDATA[
+<div id="scrollnews" onmouseover="javascript:_stop();" onmouseout="javascript:_start();" style="margin:5px;color:#FFFFFF;height:140px;line-heihgt:140px;font-size:12px;overflow: hidden;">
+				<div style="text-align:center;font-size:14px;font-weight:bold;">关于园林绿化单位登录功能暂时关闭的通知</div>
+				<div>各园林绿化单位：<br>　　根据工作安排，“施工企业动态管理系统”暂时关闭园林绿化单位登陆功能，同时暂停园林绿化单位入库审核工作。<br>　　特此通知。<br></div>
+				<div style="text-align:right;">无锡市新区建设环保局<br>,二○一四年三月十三日<br><br><br></div>
+			</div>
+]]></SCROLLNEWS>
+</configuration>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<DATA>
+  <R c="GJG" t="钢结构" s="GJG" a="" l="2"/>
+  <R c="JZZS" t="建筑装饰" s="JZZS" a="" l="2"/>
+  <R c="MQMC" t="幕墙门窗" s="MQMC" a="" l="2"/>
+  <R c="QTGC" t="其他工程" s="QTGC" a="" l="2"/>
+  <R c="SBAZ" t="设备安装" s="SBAZ" a="" l="2"/>
+  <R c="SZGC" t="市政工程" s="SZGC" a="" l="2"/>
+  <R c="TFZJ" t="土方桩基" s="TFZJ" a="" l="2"/>
+  <R c="TJGC" t="土建工程" s="TJGC" a="" l="2"/>
+  <R c="XF" t="消防" s="XF" a="" l="2"/>
+</DATA>

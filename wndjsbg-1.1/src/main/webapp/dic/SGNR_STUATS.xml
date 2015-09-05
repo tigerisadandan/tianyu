@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<DATA>
+  <R c="10" t="已通过" s="SGNR_STUATS" a="" l="2"/>
+  <R c="20" t="未通过" s="SGNR_STUATS" a="" l="2"/>
+  <R c="30" t="待审核" s="SGNR_STUATS" a="" l="2"/>
+  <R c="40" t="未提交" s="SGNR_STUATS" a="" l="2"/>
+</DATA>

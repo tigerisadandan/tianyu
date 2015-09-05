@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <entry key="queryUnique"><![CDATA[ SELECT COUNT(1) CNT FROM FS_ORG_ROLE WHERE NAME = '${roleName}' ]]></entry>
+  <entry key="queryRole"><![CDATA[ SELECT ROLE_ID, NAME, S_MEMO, LEVEL_NAME, DEPTID, YWLX, SJBH, BZ, LRR, LRSJ, LRBM, LRBMMC, GXR, GXSJ, GXBM, GXBMMC, SJMJ, SFYX,ROLETYPE,PARENTROLEID FROM FS_ORG_ROLE ]]></entry>
+  <entry key="executeRole"><![CDATA[ sqlString ]]></entry>
+</properties>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <entry key="find"><![CDATA[ sqlString ]]></entry>
+  <entry key="find"><![CDATA[ sqlString ]]></entry>
+  <entry key="remove"><![CDATA[ sqlString ]]></entry>
+  <entry key="remove"><![CDATA[ sqlString ]]></entry>
+  <entry key="insert"><![CDATA[ sqlString ]]></entry>
+  <entry key="update"><![CDATA[ sqlString ]]></entry>
+  <entry key="findById"><![CDATA[ sqlString ]]></entry>
+  <entry key="getSuperClassGenricType"><![CDATA[ sqlString ]]></entry>
+</properties>

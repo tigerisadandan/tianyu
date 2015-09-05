@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <entry key="find"><![CDATA[ sqlString ]]></entry>
+  <entry key="find"><![CDATA[ sqlString ]]></entry>
+  <entry key="remove"><![CDATA[ sqlString ]]></entry>
+  <entry key="remove"><![CDATA[ sqlString ]]></entry>
+  <entry key="insert"><![CDATA[ sqlString ]]></entry>
+  <entry key="insert"><![CDATA[ sqlString ]]></entry>
+  <entry key="update"><![CDATA[ sqlString ]]></entry>
+  <entry key="update"><![CDATA[ sqlString ]]></entry>
+  <entry key="findById"><![CDATA[ sqlString ]]></entry>
+  <entry key="findById"><![CDATA[ sqlString ]]></entry>
+  <entry key="queryLogin"><![CDATA[ SELECT LOGINID, USERID, UERNAME, USERDEPTID, LOGINIP, LOGINTIME, LOGINSTATUS, LOGOUTTIME, MONTH FROM FS_LOG_USERLOGIN ]]></entry>
+  <entry key="queryLogOperation"><![CDATA[ SELECT OPID, USERID, USERNAME, USERDEPTID, OPERATEIP, OPERATETIME, YWLX, SJBH, RESULT, LOGINID, MONTH, MEMO, OPERATETYPE, YWZJZD, USERDEPTNAME, YWZJZ FROM FS_LOG_USEROPERATION ]]></entry>
+</properties>

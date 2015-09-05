@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <entry key="find"><![CDATA[ sqlString ]]></entry>
+  <entry key="find"><![CDATA[ sqlString ]]></entry>
+  <entry key="remove"><![CDATA[ sqlString ]]></entry>
+  <entry key="remove"><![CDATA[ sqlString ]]></entry>
+  <entry key="insert"><![CDATA[ sqlString ]]></entry>
+  <entry key="insert"><![CDATA[ sqlString ]]></entry>
+  <entry key="update"><![CDATA[ sqlString ]]></entry>
+  <entry key="update"><![CDATA[ sqlString ]]></entry>
+  <entry key="findById"><![CDATA[ sqlString ]]></entry>
+  <entry key="findById"><![CDATA[ sqlString ]]></entry>
+  <entry key="queryDept"><![CDATA[ SELECT ROW_ID, DEPT_NAME, DEPT_PARANT_ROWID, ACTIVE_FLAG,SSXQ, DEPTTYPE, BMJC, PDM, PM, CUS_DEPT_LEVEL, JZ, JGLB,EXTEND1,FZR,FGZR,YBZR,SORT FROM FS_ORG_DEPT ]]></entry>
+  <entry key="executeDept"><![CDATA[ select max(t.row_id) from FS_ORG_DEPT t ]]></entry>
+  <entry key="loadAllDept_dept"><![CDATA[ select row_id NAME,dept_name TITLE,DEPT_PARANT_ROWID PARENT,FZR,FGZR,YBZR from FS_ORG_DEPT t ]]></entry>
+  <entry key="loadAllDept_rowids"><![CDATA[ select distinct DEPT_PARANT_ROWID from FS_ORG_DEPT where row_id in(${row_ids}) ]]></entry>
+  <entry key="leaderSave"><![CDATA[ sqlString ]]></entry>
+</properties>

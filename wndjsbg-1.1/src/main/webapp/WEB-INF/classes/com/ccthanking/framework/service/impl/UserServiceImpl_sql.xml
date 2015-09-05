@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="main"><![CDATA[ sqlString ]]></entry>
+	<entry key="find"><![CDATA[ sqlString ]]></entry>
+	<entry key="find"><![CDATA[ sqlString ]]></entry>
+	<entry key="remove"><![CDATA[ sqlString ]]></entry>
+	<entry key="remove"><![CDATA[ sqlString ]]></entry>
+	<entry key="insert"><![CDATA[ sqlString ]]></entry>
+	<entry key="insert"><![CDATA[ sqlString ]]></entry>
+	<entry key="update"><![CDATA[ sqlString ]]></entry>
+	<entry key="update"><![CDATA[ sqlString ]]></entry>
+	<entry key="findById"><![CDATA[ sqlString ]]></entry>
+	<entry key="findById"><![CDATA[ sqlString ]]></entry>
+	<entry key="getUserByUsernameAndPassword"><![CDATA[ SELECT * FROM FS_EAP_MENU  WHERE "NAME"='bzwdgl' ]]></entry>
+	<entry key="insertdemo"><![CDATA[ sqlString ]]></entry>
+	<entry key="updatedemo"><![CDATA[ sqlString ]]></entry>
+	<entry key="queryConditiondemo"><![CDATA[ sqlString ]]></entry>
+	<entry key="queryUser">
+		<![CDATA[ 
+			SELECT ACCOUNT, PASSWORD, NAME, SEX, DEPARTMENT, PARENT, PERSON_KIND, 
+           	USER_SN, LEVEL_NAME, SECRET_LEVEL, FLAG, IDCARD, CERTCODE, SMTP, MAILFROM, 
+           	MAILNAME, MAILPSW, USERTEMPLATE, JWQ, ZRQ, SJHM,SORT FROM FS_ORG_PERSON
+		 ]]>
+	</entry>
+	<entry key="executeUser"><![CDATA[ sqlString ]]></entry>
+	<entry key="insertFsVO_fsidSqlTX"><![CDATA[ select fsid from FS_ORG_PERSON_FS where account='${account}' and sfyx='1' and fslb='${fslb}' ]]></entry>
+	<entry key="insertFsVO_sqlTx"><![CDATA[ update FS_ORG_PERSON_FS set sfyx='0' where account='${account}' and fslb='${fslb}' ]]></entry>
+	<entry key="insertFsVO_fsidSqlQM"><![CDATA[ select fsid from FS_ORG_PERSON_FS where account='${account}' and sfyx='1' and fslb='${fslb}' ]]></entry>
+	<entry key="insertFsVO_sqlQm"><![CDATA[ update FS_ORG_PERSON_FS set sfyx='0' where account='${account}' and fslb='${fslb}' ]]></entry>
+	<entry key="insertFsVO_sqlQm2"><![CDATA[ delete from FS_FILEUPLOAD where ywid='${ywid}' and fjlb='${fjlb}' ]]></entry>
+	<entry key="insertFsVO"><![CDATA[ sqlString ]]></entry>
+	<entry key="insertFsVO"><![CDATA[ sqlString ]]></entry>
+	<entry key="insertFsVO"><![CDATA[ sqlString ]]></entry>
+	<entry key="insertFsVO"><![CDATA[ sqlString ]]></entry>
+	<entry key="queryUnique"><![CDATA[ SELECT COUNT(1) CNT FROM FS_ORG_PERSON WHERE ACCOUNT = '${account}' ]]></entry>
+	<entry key="queryRole">
+		<![CDATA[ 
+			SELECT R.ROLE_ID RID, RP.ROLE_ID RPID, R.NAME RNAME,R.ROLETYPE,R.PARENTROLEID 
+            FROM (SELECT ROLE_ID,NAME,SFYX,ROLETYPE,PARENTROLEID FROM FS_ORG_ROLE WHERE SFYX='1') R LEFT JOIN FS_ORG_ROLE_PSN_MAP RP 
+           	ON R.ROLE_ID = RP.ROLE_ID AND RP.PERSON_ACCOUNT='${account}' AND R.SFYX = '1' 
+		]]>
+	</entry>
+	<entry key="queryPersonRole">
+		<![CDATA[ 
+			select t.account,d.person_account,t.name,(select e.dept_name from FS_ORG_DEPT e where e.row_id = t.department) as dept_name 
+         	from fs_org_person t,fs_org_role_psn_map d 
+           	where t.account = d.person_account(+) and d.role_id(+) = '${id)'
+           	order by t.department ,to_number(t.sort) asc
+		]]>
+	</entry>
+	<entry key="awardRoleToUser_delete"><![CDATA[ DELETE FROM FS_ORG_ROLE_PSN_MAP WHERE PERSON_ACCOUNT='${account}' ]]></entry>
+	<entry key="awardRoleToUser_insert"><![CDATA[ INSERT INTO FS_ORG_ROLE_PSN_MAP(ROLE_NAME, PERSON_ACCOUNT, ROLE_ID) VALUES ('${roleName}','${account}','${roleId}') ]]></entry>
+	<entry key="awardRoleToPerson_delete"><![CDATA[ DELETE FROM FS_ORG_ROLE_PSN_MAP WHERE role_id='${roleid}' ]]></entry>
+	<entry key="awardRoleToPerson_insert"><![CDATA[ INSERT INTO FS_ORG_ROLE_PSN_MAP(ROLE_NAME, PERSON_ACCOUNT, ROLE_ID) VALUES ('${rolename}','${account}','${roleid}') ]]></entry>
+	<entry key="loadAllUser_queryDict"><![CDATA[ select * from (select row_id NAME,dept_name TITLE,'1' PARENT,'0' TREENODE,ROW_ID DEPTID,'' TEL,'' sort from FS_ORG_DEPT t  ]]></entry>
+	<entry key="loadAllUser_checkedParent"><![CDATA[ select department from FS_ORG_PERSON where account='${arr}'  ]]></entry>
+	<entry key="loadAllUser_union"><![CDATA[ select account NAME,name TITLE,DEPARTMENT PARENT,'1' TREENODE,DEPARTMENT DEPTID,SJHM TEL,sort from fs_org_person ]]></entry>
+	<entry key="loadDeptUser"><![CDATA[ select account ACCOUNT,name,sex,SJHM TEL,sort from fs_org_person  ]]></entry>
+	<entry key="queryUserFile"><![CDATA[ sqlString ]]></entry>
+	<entry key="resetPw"><![CDATA[ update FS_ORG_PERSON t set PASSWORD = '${password}' where t.ACCOUNT ='${account}' ]]></entry>
+	<entry key="personInfo">
+		<![CDATA[ 
+			SELECT ACCOUNT, PASSWORD, NAME, SEX, DEPARTMENT, PARENT, PERSON_KIND, 
+          	USER_SN, LEVEL_NAME, SECRET_LEVEL, FLAG, IDCARD, CERTCODE, SMTP, MAILFROM, 
+          	MAILNAME, MAILPSW, USERTEMPLATE, JWQ, ZRQ, SJHM,SORT FROM FS_ORG_PERSON WHERE FLAG='1' AND ACCOUNT='${account}'
+		 ]]>
+	</entry>
+</properties>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <entry key="getObject">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getObject">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getBoolean">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getBoolean">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getInt">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getInt">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getLong">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getLong">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getFloat">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getFloat">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getDouble">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getDouble">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getType">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getString">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getString">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getIndex">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getTimestamp">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getTimestamp">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getBigDecimal">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getBigDecimal">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getSql">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getColumnCount">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getParas">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getDataObj">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getDataObjs">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getAttrMap">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getRowCount">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getPageSize">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getPageNo">&lt;![CDATA[ sqlString ]]&gt;</entry>
+</properties>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="find"><![CDATA[ sqlString ]]></entry>
+	<entry key="find"><![CDATA[ sqlString ]]></entry>
+	<entry key="remove"><![CDATA[ sqlString ]]></entry>
+	<entry key="remove"><![CDATA[ sqlString ]]></entry>
+	<entry key="insert"><![CDATA[ sqlString ]]></entry>
+	<entry key="insert"><![CDATA[ sqlString ]]></entry>
+	<entry key="update"><![CDATA[ sqlString ]]></entry>
+	<entry key="update"><![CDATA[ sqlString ]]></entry>
+	<entry key="findById"><![CDATA[ sqlString ]]></entry>
+	<entry key="findById"><![CDATA[ sqlString ]]></entry>
+	<entry key="getAllMenu"><![CDATA[ SELECT NAME, TITLE, PARENT, ORDERNO, TARGET, LOCATION, LEVELNO, IMAGE, ALTIMAGE, APP_NAME, LAYERSNO, MEMO, LRR, LRSJ, LRBM, LRBMMC, GXR, GXSJ, GXBM, GXBMMC, SJMJ, SFYX FROM FS_EAP_MENU WHERE SFYX='1' ORDER BY ORDERNO ]]></entry>
+	<entry key="executeMenu"><![CDATA[ select max(orderno) maxOrderNo from FS_EAP_MENU where parent='${parent}' ]]></entry>
+	<entry key="queryUnique"><![CDATA[ SELECT COUNT(1) CNT FROM FS_EAP_MENU WHERE NAME = '${menuName}' ]]></entry>
+	<entry key="loadAllMenu_queryDictSql"><![CDATA[ SELECT RM.MENU_NAME MENU_NAME, T.NAME, T.TITLE, T.PARENT, T.ORDERNO, T.TARGET, T.LOCATION, T.CHIEF, T.LEVELNO FROM (SELECT * FROM FS_EAP_MENU WHERE SFYX='1') T LEFT JOIN FS_ORG_ROLE_MENU_MAP RM ON T.NAME = RM.MENU_NAME AND RM.ROLE_ID = '${roleId}' ORDER BY T.ORDERNO ]]></entry>
+	<entry key="loadAllMenu_resourceSql"><![CDATA[ select f.MENU_NAME,FS_PAGE_RESOURCE_ID,NAME,MEMO,URL,PARENT,SFYX,SSFL from FS_PAGE_RESOURCE t LEFT JOIN FS_ORG_ROLE_MENU_MAP f ON t.FS_PAGE_RESOURCE_ID = f.MENU_NAME AND f.ROLE_ID = '${roleId}' ]]></entry>
+	<entry key="awardMenuToRole_delete"><![CDATA[ DELETE FROM FS_ORG_ROLE_MENU_MAP WHERE ROLE_ID='${roleId}' ]]></entry>
+	<entry key="awardMenuToRole_insert"><![CDATA[ INSERT INTO FS_ORG_ROLE_MENU_MAP(ROLE_ID, MENU_NAME) VALUES ('${roleId}','${menuName[i]}') ]]></entry>
+</properties>

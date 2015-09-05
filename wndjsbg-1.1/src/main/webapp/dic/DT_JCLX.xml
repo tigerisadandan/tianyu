@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<DATA>
+  <R c="DL" t="独立基础" s="DT_JCLX" a="" l="2"/>
+  <R c="FB" t="筏板基础" s="DT_JCLX" a="" l="2"/>
+  <R c="FP" t="粉喷桩" s="DT_JCLX" a="" l="2"/>
+  <R c="JY" t="静压桩" s="DT_JCLX" a="" l="2"/>
+  <R c="MG" t="锚杆装" s="DT_JCLX" a="" l="2"/>
+  <R c="PT" t="普通" s="DT_JCLX" a="" l="2"/>
+  <R c="RG" t="人工挖孔桩" s="DT_JCLX" a="" l="2"/>
+  <R c="SC" t="深层搅拌桩" s="DT_JCLX" a="" l="2"/>
+  <R c="SS" t="碎石桩" s="DT_JCLX" a="" l="2"/>
+  <R c="ZD" t="振动沉管桩" s="DT_JCLX" a="" l="2"/>
+  <R c="ZJ" t="桩基" s="DT_JCLX" a="" l="2"/>
+  <R c="ZK" t="钻孔灌注桩" s="DT_JCLX" a="" l="2"/>
+</DATA>

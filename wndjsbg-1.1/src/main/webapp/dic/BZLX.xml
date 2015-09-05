@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<DATA>
+  <R c="CS" t="初审" s="CS" a="" l="1"/>
+  <R c="FH" t="复核" s="FH" a="" l="1"/>
+  <R c="GD" t="归档" s="GD" a="" l="1"/>
+  <R c="HF" t="核发" s="HF" a="" l="1"/>
+  <R c="HY" t="会议" s="HY" a="" l="1"/>
+  <R c="QH" t="签发" s="QF" a="" l="1"/>
+  <R c="QTCZ" t="其他操作" s="QTCZ" a="" l="1"/>
+  <R c="SC" t="上传
+" s="SC" a="" l="1"/>
+  <R c="SH" t="审核" s="SH" a="" l="1"/>
+  <R c="SJ" t="收件" s="SJ" a="" l="1"/>
+  <R c="TB" t="填报" s="TB" a="" l="1"/>
+</DATA>

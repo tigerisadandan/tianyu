@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<%@ page language="java" pageEncoding="UTF-8"%>
+<%@ taglib uri= "/tld/base.tld" prefix="app" %>
+<app:base/>
+<title>业务页面模版表-维护</title>
+<%
+	String type=request.getParameter("type");
+%>
+<script src="${pageContext.request.contextPath }/js/common/xWindow.js"></script>
+<script type="text/javascript" charset="utf-8">
+//请求路径，对应后台RequestMapping
+var controllername= "${pageContext.request.contextPath }/commons/cbTemplateController.do";
+var type ="<%=type%>";
+//页面初始化
+$(function() {
+	init();
+	//按钮绑定事件（查询）
+	$("#btnQuery").click(function() {
+		//生成json串
+		var data = combineQuery.getQueryCombineData(queryForm,frmPost,cbTemplateList);
+		//调用ajax插入
+		defaultJson.doQueryJsonList(controllername+"?query",data,cbTemplateList);
+	});
+	//按钮绑定事件(保存)
+	$("#btnSave").click(function() {
+		if($("#cbTemplateForm").validationButton())
+		{
+		    //生成json串
+		    var data = Form2Json.formToJSON(cbTemplateForm);
+		  //组成保存json串格式
+		    var data1 = defaultJson.packSaveJson(data);
+		  //调用ajax插入
+		    if($("#ID").val() == "" || $("#ID").val() == null){
+    			defaultJson.doInsertJson(controllername + "?insert", data1,cbTemplateList);
+    			$("#cbTemplateForm").clearFormResult();
+    		}else{
+    			defaultJson.doUpdateJson(controllername + "?insert", data1,cbTemplateList);
+    		}
+		}else{
+			requireFormMsg();
+		  	return;
+		}
+	});
+	
+	//按钮绑定事件（新增）
+    $("#btnClear_Bins").click(function() {
+        $("#cbTemplateForm").clearFormResult();
+        $("#cbTemplateForm").cancleSelected();
+        
+        
+        $("#ZFRQ").val(new Date().toLocaleDateString());
+        $("#ZFJE").val(0);
+        $("#ID").val("");
+    });
+	
+	//按钮绑定事件（清空）
+    $("#btnClear").click(function() {
+        $("#queryForm").clearFormResult();
+    });
+    
+    <%
+    if(type.equals("detail")){
+	%>
+	//置所有input 为disabled
+	$(":input").each(function(i){
+	   $(this).attr("disabled", "true");
+	 });
+	<%
+		}
+	%>
+	
+});
+//页面默认参数
+function init(){
+	getNd();
+<%--	if(type == "insert"){--%>
+<%--	}else if(type == "update" || type == "detail"){--%>
+<%--		var tempJson;--%>
+<%--		if(navigator.userAgent.indexOf("Firefox")>0) {--%>
+<%--			var rowValue = $(parent.frames["menuiframe"]).contents().find("#resultXML").val();--%>
+<%--			tempJson = eval("("+rowValue+")");--%>
+<%--		}else{--%>
+<%--			var rowValue = $(parent.frames["menuiframe"].document).find("#resultXML").val();--%>
+<%--			tempJson = eval("("+rowValue+")");--%>
+<%--		}--%>
+<%--		//表单赋值--%>
+<%--		$("#$("#cbTemplateForm")").setFormValues(tempJson);--%>
+<%--	}--%>
+}
+
+
+//点击行事件
+function tr_click(obj){
+	//alert(JSON.stringify(obj));
+	$("#cbTemplateForm").setFormValues(obj);
+}
+
+//默认年度
+function getNd(){
+	$("#QZFRQ").val(new Date().getFullYear());
+}
+//选中项目名称弹出页
+function selectXm(){
+	$(window).manhuaDialog({"title":"","type":"text","content":"${pageContext.request.contextPath }/jsp/business/zjgl/xmcx.jsp","modal":"2"});
+}
+//弹出区域回调
+getWinData = function(data){
+	$("#XMMC").val(JSON.parse(data).XMMC);
+	$("#XMBH").val(JSON.parse(data).XMBH);
+	$("#GC_TCJH_XMXDK_ID").val(JSON.parse(data).GC_TCJH_XMXDK_ID);
+};
+
+//详细信息
+function rowView(index){
+	var obj = $("#cbTemplateList").getSelectedRowJsonByIndex(index);
+	var xmbh = eval("("+obj+")").XMBH;
+	$(window).manhuaDialog(xmscUrl(xmbh));
+}
+</script>      
+</head>
+<body>
+<app:dialogs/>
+<div class="container-fluid">
+<div class="row-fluid">
+    <div class="B-small-from-table-autoConcise">
+     <form method="post" id="queryForm"  >
+      <table class="B-table" width="100%">
+      <!--可以再此处加入hidden域作为过滤条件 -->
+      	<TR  style="display:none;">
+	        <TD class="right-border bottom-border"></TD>
+			<TD class="right-border bottom-border">
+			</TD>
+        </TR>
+         <tr>
+        	<th width="5%" class="right-border bottom-border text-right">年度</th>
+	        <td class="right-border bottom-border" width="10%">
+	        </td>
+	        <th width="5%" class="right-border bottom-border text-right">项目名称</th>
+			<td class="right-border bottom-border" width="20%">
+				<input class="span12" type="text" name = "QXMMC" fieldname = "gtx.XMMC" operation="like" >
+			</td>
+			<td class="text-left bottom-border text-right">
+	        	<button id="btnQuery" class="btn btn-link"  type="button" style="font-family:SimYou,Microsoft YaHei;font-weight:bold;"><i class="icon-search"></i>查询</button>
+	        	<button id="btnClear" class="btn btn-link" type="button" style="font-family:SimYou,Microsoft YaHei;font-weight:bold;"><i class="icon-trash"></i>清空</button>
+	        </td>
+		</tr>
+      </table>
+      </form>
+    <div style="height:5px;"></div>
+    <div class="overFlowX">
+	<table class="table-hover table-activeTd B-table" id="cbTemplateList" width="100%" type="single" pageNum="5">
+		<thead>
+			<tr>
+ 			    <th  name="XH" id="_XH" style="width:10px" colindex=1 tdalign="center">&nbsp;#&nbsp;</th>
+				<th fieldname="ID" colindex=0 tdalign="center" >&nbsp;编号&nbsp;</th>
+				<th fieldname="NAME" colindex=1 tdalign="center" maxlength="30" >&nbsp;模版名称&nbsp;</th>
+				<th fieldname="SOURCE" colindex=2 tdalign="center" >&nbsp;模版内容&nbsp;</th>
+				<th fieldname="LASTMODIFIED" colindex=3 tdalign="center" >&nbsp;最后修改时间&nbsp;</th>
+				<th fieldname="ISDIRECTORY" colindex=4 tdalign="center" >&nbsp;是否目录&nbsp;</th>
+				<th fieldname="YWLX" colindex=5 tdalign="center" >&nbsp;业务类型&nbsp;</th>
+				<th fieldname="SJMJ" colindex=6 tdalign="center" maxlength="30" >&nbsp;数据密级&nbsp;</th>
+				<th fieldname="BZ" colindex=7 tdalign="center" maxlength="30" >&nbsp;备注&nbsp;</th>
+				<th fieldname="SFYX" colindex=8 tdalign="center" >&nbsp;是否有效&nbsp;</th>
+				<th fieldname="LRR" colindex=9 tdalign="center" maxlength="30" >&nbsp;录入人&nbsp;</th>
+				<th fieldname="LRBM" colindex=10 tdalign="center" maxlength="30" >&nbsp;录入部门&nbsp;</th>
+				<th fieldname="LRSJ" colindex=11 tdalign="center" >&nbsp;录入时间&nbsp;</th>
+				<th fieldname="GXR" colindex=12 tdalign="center" maxlength="30" >&nbsp;更新人&nbsp;</th>
+				<th fieldname="GXBM" colindex=13 tdalign="center" maxlength="30" >&nbsp;更新部门&nbsp;</th>
+				<th fieldname="GXSJ" colindex=14 tdalign="center" >&nbsp;更新时间&nbsp;</th>
+             </tr>
+		</thead>
+		<tbody>
+           </tbody>
+	</table>
+	</div>
+	</div>
+	<div style="height:5px;"></div>
+	<div class="B-small-from-table-autoConcise">
+      <h4 class="title">业务页面模版表
+      	<span class="pull-right">
+      		<button id="btnClear_Bins" class="btn" type="button" style="font-family:SimYou,Microsoft YaHei;font-weight:bold;">清空</button>
+	  		<button id="btnSave" class="btn" type="button" style="font-family:SimYou,Microsoft YaHei;font-weight:bold;">保存</button>
+      	</span>
+      </h4>
+     <form method="post" id="cbTemplateForm"  >
+      <table class="B-table" width="100%" >
+		<tr>
+			<th width="8%" class="right-border bottom-border text-right">是否有效</th>
+			<td width="17%" class="right-border bottom-border">
+				<input id="SFYX" class="span12" placeholder="必填" check-type="required" check-type="maxlength" maxlength="4" name="SFYX" fieldname="SFYX" type="text" />
+			</td>
+			<th width="8%" class="right-border bottom-border text-right">ID</th>
+			<td width="17%" class="right-border bottom-border">
+				<input id="ID" class="span12" placeholder="必填" check-type="maxlength" maxlength="40" name="ID" fieldname="ID" type="text" />
+			</td>
+		</tr>
+		
+        <tr>
+	        <th width="8%" class="right-border bottom-border text-right">备注</th>
+	        <td colspan="3" class="bottom-border right-border" >
+	        	<textarea class="span12" rows="2" id="BZ" check-type="maxlength" maxlength="4000" fieldname="BZ" name="BZ"></textarea>
+	        </td>
+        </tr>
+      </table>
+      </form>
+    </div>
+   </div>
+  </div>
+  <div align="center">
+ 	<FORM name="frmPost" method="post" style="display:none" target="_blank">
+		 <!--系统保留定义区域-->
+         <input type="hidden" name="queryXML" id = "queryXML">
+         <input type="hidden" name="txtXML" id = "txtXML">
+         <input type="hidden" name="txtFilter"  order="desc" fieldname = "t.LRSJ" id = "txtFilter">
+         <input type="hidden" name="resultXML" id = "resultXML">
+       		 <!--传递行数据用的隐藏域-->
+         <input type="hidden" name="rowData">
+		
+ 	</FORM>
+ </div>
+</body>
+<script>
+</script>
+</html>

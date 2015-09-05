@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<DATA>
+  <R c="1" t="道路" s="1" a="" l="2"/>
+  <R c="2" t="桥梁" s="2" a="" l="2"/>
+  <R c="3" t="其他" s="3" a="" l="2"/>
+</DATA>

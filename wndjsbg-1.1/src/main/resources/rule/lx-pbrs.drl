@@ -1,0 +1,158 @@
+package com.ccthanking.business.sgenter;
+import com.ccthanking.business.sgenter.vo.SgBbPojo;
+import com.ccthanking.business.sgenter.vo.SgBbPbrsPojo;
+global SgBbPojo retPojo;
+
+
+//建筑面积在10万平方米以上时，每增加5万平方米，施工员、安全员、质检员应各增加1人。资料员、信息管理员可兼职
+function int printName(SgBbPbrsPojo in){
+int num =  new Float(in.getDwjzmj()).intValue();
+num =(num-100000)/50000;
+
+System.out.println("增加次数"+num);
+return num;
+
+}
+
+
+//项目名称--->配备人数
+//工程合同价在1亿元以上时，每增加5000万元，施工员、安全员、质检员各增加1人。资料员、信息管理员可兼职
+function int printName2(SgBbPbrsPojo inn){
+long numn =inn.getDxgchte();
+numn =(numn-(100000000))/(50000000);
+System.out.println("增加次数"+numn);
+int count=new Long(numn).intValue();
+return count;
+}
+
+rule "sg_pbrs_22_rs_x"  
+salience 80  
+no-loop true  
+activation-group "sg_pbrs"
+when  
+    $inpojo : SgBbPbrsPojo((gclb == 22) && (dwjzmj<=10000))  
+then          
+    System.out.println("工程类型为:22 房屋建筑工程  return :CENGSHU,KUADU,GUIMO   小型");  
+    retPojo.setZdpbrs("xmfzr:1,xmjsfzr:1,sgy:1,aqy:1,zjy:1,zly:1,xxgly:1");//最低配备人数String
+    retPojo.setQyzzpdbz("CENGSHU,KUADU,GUIMO");
+    retPojo.setZdpbrszjfs(0);
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pbrs_22_rs_z"  
+salience 80  
+no-loop true  
+activation-group "sg_pbrs"
+when  
+    $inpojo : SgBbPbrsPojo((gclb == 22) && (dwjzmj>10000) &&(dwjzmj<=50000))  
+then          
+    System.out.println("工程类型为:22 房屋建筑工程  return :CENGSHU,KUADU,GUIMO   中型");  
+    retPojo.setZdpbrs("xmfzr:1,xmjsfzr:1,sgy:2,aqy:2,zjy:1,zly:1,xxgly:1");//最低配备人数String
+    retPojo.setQyzzpdbz("CENGSHU,KUADU,GUIMO");
+    retPojo.setZdpbrszjfs(0);
+    retPojo.setEnabled(true);
+end 
+rule "sg_pbrs_22_rs_d"  
+salience 80  
+no-loop true  
+activation-group "sg_pbrs"
+when  
+    $inpojo : SgBbPbrsPojo((gclb == 22) && (dwjzmj>50000))  
+then          
+    System.out.println("工程类型为:22 房屋建筑工程  return :CENGSHU,KUADU,GUIMO   大型");  
+    retPojo.setZdpbrs("xmfzr:1,xmjsfzr:1,sgy:3,aqy:3,zjy:2,zly:1,xxgly:1");//最低配备人数String
+    retPojo.setQyzzpdbz("CENGSHU,KUADU,GUIMO");
+    retPojo.setZdpbrszjfs(0);
+    retPojo.setEnabled(true);
+    update($inpojo);
+end
+
+
+rule "sg_pbrs_22_rs_zj"  
+salience 50  
+activation-group "sg_pbrs_zj"
+when  
+    $inpojo : SgBbPbrsPojo((gclb == 22) && (dwjzmj>100000))  
+then          
+    System.out.println("工程类型为:22 房屋建筑工程  return :CENGSHU,KUADU,GUIMO   大于10W 增加人员");  
+    retPojo.setZdpbrszj("sgy:1,aqy:1,zjy:1");
+    retPojo.setQyzzpdbz("CENGSHU,KUADU,GUIMO");
+    retPojo.setZdpbrszjfs(printName($inpojo));
+end 
+
+
+//----------------------------
+
+
+rule "sg_pbrs_28_rs_x"  
+salience 80  
+no-loop true  
+activation-group "sg_pbrs"
+when  
+    $inpojo : SgBbPbrsPojo(((gclb == 23)||(gclb==25)||(gclb==39)) && (dxgchte<=50000000))  
+then     
+    retPojo.setZdpbrs("xmfzr:1,xmjsfzr:1,sgy:1,aqy:1,zjy:1,zly:1,xxgly:1");//最低配备人数String
+    retPojo.setQyzzpdbz("CENGSHU,KUADU,GUIMO");
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pbrs_28_rs_z"  
+salience 80  
+no-loop true  
+activation-group "sg_pbrs"
+when  
+    $inpojo : SgBbPbrsPojo(((gclb == 23)||(gclb==25)||(gclb==39)) && (dxgchte>50000000) &&(dxgchte<=100000000))  
+then          
+    retPojo.setZdpbrs("xmfzr:1,xmjsfzr:1,sgy:1,aqy:2,zjy:1,zly:1,xxgly:1");//最低配备人数String
+    retPojo.setQyzzpdbz("CENGSHU,KUADU,GUIMO");
+    retPojo.setEnabled(true);
+end 
+rule "sg_pbrs_28_rs_d"  
+salience 80  
+no-loop true  
+activation-group "sg_pbrs"
+when  
+    $inpojo : SgBbPbrsPojo(((gclb == 23)||(gclb==25)||(gclb==39)) && (dxgchte>100000000))  
+then          
+    retPojo.setZdpbrs("xmfzr:1,xmjsfzr:1,sgy:2,aqy:3,zjy:1,zly:1,xxgly:1");//最低配备人数String
+    retPojo.setQyzzpdbz("CENGSHU,KUADU,GUIMO");
+    retPojo.setEnabled(true);
+    update($inpojo);
+end
+
+
+rule "sg_pbrs_24_rs_x-z"  
+salience 80  
+no-loop true  
+activation-group "sg_pbrs"
+when  
+    $inpojo : SgBbPbrsPojo((gclb==24) && (dxgchte<=100000000))  
+then          
+    retPojo.setZdpbrs("xmfzr:1,xmjsfzr:1,sgy:1");//最低配备人数String
+    retPojo.setQyzzpdbz("CENGSHU,KUADU,GUIMO");
+    retPojo.setEnabled(true);
+end 
+rule "sg_pbrs_24_rs_d"  
+salience 80  
+no-loop true  
+activation-group "sg_pbrs"
+when  
+    $inpojo : SgBbPbrsPojo((gclb==24) && (dxgchte>100000000))  
+then          
+    retPojo.setZdpbrs("xmfzr:1,xmjsfzr:1,sgy:2");//最低配备人数String
+    retPojo.setQyzzpdbz("CENGSHU,KUADU,GUIMO");
+    retPojo.setEnabled(true);
+    update($inpojo);
+end
+
+rule "sg_pbrs_28_rs_zj"  
+salience 50  
+activation-group "sg_pbrs_zj"
+when  
+    $inpojo : SgBbPbrsPojo(((gclb == 23)||(gclb==24)||(gclb==25)||(gclb==39)) && (dxgchte>100000000))  
+then          
+    retPojo.setZdpbrszj("sgy:1,aqy:1,zjy:1");
+    retPojo.setQyzzpdbz("CENGSHU,KUADU,GUIMO");
+    retPojo.setZdpbrszjfs(printName2($inpojo));
+end 
+

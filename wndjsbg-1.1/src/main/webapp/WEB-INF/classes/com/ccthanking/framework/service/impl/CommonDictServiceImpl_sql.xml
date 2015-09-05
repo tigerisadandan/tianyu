@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <entry key="queryCommonDict"><![CDATA[ SELECT DICT_ID, DICT_NAME, DICT_CATEGORY,PXH FROM FS_COMMON_DICT ]]></entry>
+  <entry key="executeCommonDict"><![CDATA[ sqlString ]]></entry>
+  <entry key="sortOne"><![CDATA[ update FS_COMMON_DICT set pxh = (pxh+1) where pxh <= 20 and DICT_CATEGORY = '${dict_category}' ]]></entry>
+</properties>

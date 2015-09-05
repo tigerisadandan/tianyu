@@ -1,0 +1,225 @@
+package com.ccthanking.business.sgenter;
+
+import com.ccthanking.business.sgenter.vo.SgBbPojo;
+import com.ccthanking.business.sgenter.vo.SgBbPdyjPojo;
+
+global SgBbPojo retPojo;
+
+//项目名称--->判断依据
+
+
+rule "sg_pdyj_27"  
+salience 100  
+no-loop true  
+activation-group "sg_pdyj"
+when  
+    $inpojo : SgBbPdyjPojo(gclx == 27)  
+then          
+    System.out.println("工程类型为:27 房屋建筑工程 return :CENGSHU,KUADU,GUIMO");  
+    retPojo.setQyzzpdbz("CENGSHU,KUADU,GUIMO");
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pdyj_28"  
+salience 99  
+no-loop true  
+activation-group "sg_pdyj"
+when  
+    $inpojo : SgBbPdyjPojo(gclx == 28)  
+then          
+    System.out.println("工程类型为:28 住宅小区或建筑群体工程 return :GUIMO");  
+    retPojo.setQyzzpdbz("GUIMO");
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pdyj_29"  
+salience 98  
+no-loop true  
+activation-group "sg_pdyj"
+when  
+    $inpojo : SgBbPdyjPojo(gclx == 29)  
+then          
+    System.out.println("工程类型为:29 钢结构工程 return :KUADU,ZHONGLIANG,GUIMO");  
+    retPojo.setQyzzpdbz("KUADU,ZHONGLIANG,GUIMO");
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pdyj_30"  
+salience 97  
+no-loop true  
+activation-group "sg_pdyj"
+when  
+    $inpojo : SgBbPdyjPojo(gclx == 30)  
+then          
+    System.out.println("工程类型为:30 金属门窗工程 return :CENGSHU,GUIMO,JINE");  
+    retPojo.setQyzzpdbz("CENGSHU,GUIMO,JINE");
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pdyj_41"  
+salience 96  
+no-loop true  
+activation-group "sg_pdyj"
+when  
+    $inpojo : SgBbPdyjPojo(gclx == 41)  
+then          
+    System.out.println("工程类型为:41 其他 return :GUIMO");  
+    retPojo.setQyzzpdbz("GUIMO");
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pdyj_31"  
+salience 95 
+no-loop true  
+activation-group "sg_pdyj"
+when  
+    $inpojo : SgBbPdyjPojo(gclx == 31)  
+then          
+    System.out.println("工程类型为:31 装饰装修工程 return :JINE");  
+    retPojo.setQyzzpdbz("JINE");
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pdyj_32"  
+salience 94 
+no-loop true  
+activation-group "sg_pdyj"
+when  
+    $inpojo : SgBbPdyjPojo(gclx == 32)  
+then          
+    System.out.println("工程类型为:32 建筑幕墙工程 return :JINE,GUIMO,GAODU");  
+    retPojo.setQyzzpdbz("JINE,GUIMO,GAODU");
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pdyj_42"  
+salience 93
+no-loop true  
+activation-group "sg_pdyj"
+when  
+    $inpojo : SgBbPdyjPojo(gclx == 42)  
+then          
+    System.out.println("工程类型为:42 其他 return :GUIMO");  
+    retPojo.setQyzzpdbz("GUIMO");
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pdyj_33"  
+salience 92  
+no-loop true  
+activation-group "sg_pdyj"
+when  
+    $inpojo : SgBbPdyjPojo(gclx == 33)  
+then          
+    System.out.println("工程类型为:33 城市道桥、排水工程 return :JINE");  
+    retPojo.setQyzzpdbz("JINE");
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pdyj_34"  
+salience 91  
+no-loop true  
+activation-group "sg_pdyj"
+when  
+    $inpojo : SgBbPdyjPojo(gclx == 34)  
+then          
+    System.out.println("工程类型为:34 庭院工程 return :JINE");  
+    retPojo.setQyzzpdbz("JINE");
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pdyj_43"  
+salience 90  
+no-loop true  
+activation-group "sg_pdyj"
+when  
+    $inpojo : SgBbPdyjPojo(gclx == 43)  
+then          
+    System.out.println("工程类型为:43 其他 return :JINE");  
+    retPojo.setQyzzpdbz("JINE");
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pdyj_36"  
+salience 89  
+no-loop true  
+activation-group "sg_pdyj"
+when  
+    $inpojo : SgBbPdyjPojo(gclx == 36)  
+then          
+    System.out.println("工程类型为:36 机电安装工程 return :JINE");  
+    retPojo.setQyzzpdbz("JINE");
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pdyj_37"  
+salience 88  
+no-loop true  
+activation-group "sg_pdyj"
+when  
+    $inpojo : SgBbPdyjPojo(gclx == 37)  
+then          
+    System.out.println("工程类型为:37 建筑智能化工程 return :JINE");  
+    retPojo.setQyzzpdbz("JINE");
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pdyj_38"  
+salience 87  
+no-loop true  
+activation-group "sg_pdyj"
+when  
+    $inpojo : SgBbPdyjPojo(gclx == 38)  
+then          
+    System.out.println("工程类型为:38 消防设施工程 return :JINE,GAODU,GUIMO");  
+    retPojo.setQyzzpdbz("JINE,GAODU,GUIMO");
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pdyj_44"  
+salience 86  
+no-loop true  
+activation-group "sg_pdyj"
+when  
+    $inpojo : SgBbPdyjPojo(gclx == 44)  
+then          
+    System.out.println("工程类型为:44 其他 return :JINE");  
+    retPojo.setQyzzpdbz("JINE");
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pdyj_35"  
+salience 85  
+no-loop true  
+activation-group "sg_pdyj"
+when  
+    $inpojo : SgBbPdyjPojo(gclx == 35)  
+then          
+    System.out.println("工程类型为:35 绿化工程return :JINE");  
+    retPojo.setQyzzpdbz("JINE");
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pdyj_39"  
+salience 84  
+no-loop true  
+activation-group "sg_pdyj"
+when  
+    $inpojo : SgBbPdyjPojo(gclx == 39)  
+then          
+    System.out.println("工程类型为:39 其他 return :JINE");  
+    retPojo.setQyzzpdbz("JINE");
+    retPojo.setEnabled(true);
+end
+
+rule "sg_pdyj_40"  
+salience 83  
+no-loop true  
+activation-group "sg_pdyj"
+when  
+    $inpojo : SgBbPdyjPojo(gclx == 40)  
+then          
+    System.out.println("工程类型为:40 其他 return :JINE");  
+    retPojo.setQyzzpdbz("JINE");
+    retPojo.setEnabled(true);
+end

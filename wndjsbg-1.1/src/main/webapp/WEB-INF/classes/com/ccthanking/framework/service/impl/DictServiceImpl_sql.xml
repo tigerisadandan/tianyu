@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <entry key="getDictByParentId"><![CDATA[ SELECT ID,PARENT_ID,DIC_CODE,DIC_VALUE,DIC_VALUE_SPELL FROM FS_DIC_TREE ORDER BY TO_NUMBER(ID) ]]></entry>
+  <entry key="getCustomDictByParentId"><![CDATA[ SELECT ID,PARENT_ID,DIC_CODE,DIC_VALUE,DIC_VALUE_SPELL,PXH FROM FS_DIC_TREE WHERE PARENT_ID='${parentId}'  ${manageTypeSql} ORDER BY TO_NUMBER(ID) ]]></entry>
+  <entry key="getDicsByParent"><![CDATA[ select  ID,PARENT_ID,DIC_CODE,DIC_VALUE,DIC_VALUE_SPELL,DIC_VALUE_ASPELL,DIC_LAYER,PXH from FS_DIC_TREE  ]]></entry>
+  <entry key="insertOrUpdate_queryMaxNumber"><![CDATA[ select max(to_number(id)) + 1 from fs_dic_tree ]]></entry>
+  <entry key="insertOrUpdate_queryMaxDicCode"><![CDATA[ select max(to_number(dic_code)) + 1 from fs_dic_tree where parent_id = '${parentId}' ]]></entry>
+  <entry key="insertOrUpdate_queryDicInfo"><![CDATA[ select dic_name_code,dic_name_value from fs_dic_tree where id = '${parentId}' ]]></entry>
+  <entry key="insertOrUpdate_insert"><![CDATA[ insert into fs_dic_tree(id,parent_id,dic_code,dic_value,dic_layer,is_leaf,dic_name_code,dic_name_value,pxh) values(?,?,?,?,?,?,?,?,?) ]]></entry>
+  <entry key="insertOrUpdate_update"><![CDATA[ update fs_dic_tree set dic_value = '${dicValue}',pxh='${pxh}' where id = '${id}' ]]></entry>
+  <entry key="insertOrUpdate_queryById"><![CDATA[ select ID, PARENT_ID, DIC_CODE, DIC_VALUE, DIC_VALUE_SPELL, DIC_VALUE_ASPELL, DIC_LAYER, IS_LEAF,PXH from fs_dic_tree where id = '${id}' ]]></entry>
+  <entry key="checkUnique"><![CDATA[ SELECT COUNT(1) CNT FROM fs_dic_tree WHERE parent_id = '${parent_id}' and DIC_CODE='${dict_code}' ]]></entry>
+  <entry key="insertOrUpdateSystemDict_queryMaxNumber"><![CDATA[ select max(to_number(id)) + 1 from fs_dic_tree ]]></entry>
+  <entry key="insertOrUpdateSystemDict_queryDicInfo"><![CDATA[ select dic_name_code,dic_name_value from fs_dic_tree where id = '${parentId}' ]]></entry>
+  <entry key="insertOrUpdateSystemDict_insert"><![CDATA[ insert into fs_dic_tree(id,parent_id,dic_code,dic_value,dic_layer,is_leaf,dic_name_code,dic_name_value,pxh) values ('${id + "','${parentId}','${dictCode}','${dicValue}','${parentId}','1','${dics[0][0]}','${dics[0][1]}','${pxh}') ]]></entry>
+  <entry key="insertOrUpdateSystemDict_update"><![CDATA[ update fs_dic_tree set dic_value = '${dicValue}',pxh='${pxh}' where id = '${id}' ]]></entry>
+  <entry key="insertOrUpdateSystemDict_queryById"><![CDATA[ select ID, PARENT_ID, DIC_CODE, DIC_VALUE, DIC_VALUE_SPELL, DIC_VALUE_ASPELL, DIC_LAYER, IS_LEAF,pxh from fs_dic_tree where id = '${id}' ]]></entry>
+  <entry key="deleteSystemDict"><![CDATA[ update fs_dic_tree set sfyx='0' where id='${id}' ]]></entry>
+</properties>

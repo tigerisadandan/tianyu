@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaseConfig>
+    <META>
+        
+    </META>
+    <LINK>
+	    <LinkName>bootstrap.css?version=20131201</LinkName>
+	    <LinkName>base.css</LinkName>
+    </LINK>
+	<JS>
+		<JSName>js/base/jquery.js</JSName>
+		<JSName>js/base/LockingTable.js</JSName>
+		<JSName>js/base/bootstrap.js</JSName>
+		<JSName>js/base/jsBruce.js</JSName>
+		<!--common_js-->
+		<JSName>js/common/Form2Json.js</JSName>
+		<JSName>js/common/convertJson.js</JSName>
+		<JSName>js/common/combineQuery.js</JSName>
+		<JSName>js/common/default.js?version=20131206</JSName>
+		<JSName>js/common/TabList.js</JSName>
+		<JSName>js/common/bootstrap-validation.js</JSName>
+		<JSName>js/common/loadFields.js?version=20131206</JSName>
+		<JSName>js/common/xWindow.js</JSName>
+		
+		<!--datatable_js-->
+		<!-- JSName>js/datatable/jquery.dataTables.js</JSName -->
+		<!-- JSName>js/datatable/jquery.jeditable.js</JSName -->
+		
+		<JSName>js/My97DatePicker/WdatePicker.js</JSName>
+	</JS>
+</BaseConfig>

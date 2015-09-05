@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<DATA>
+  <R c="1" t="超级管理员" s="CJGLY" a="" l="2"/>
+  <R c="2" t="管理员" s="GLY" a="" l="2"/>
+  <R c="3" t="普通用户" s="PTYH" a="" l="2"/>
+</DATA>

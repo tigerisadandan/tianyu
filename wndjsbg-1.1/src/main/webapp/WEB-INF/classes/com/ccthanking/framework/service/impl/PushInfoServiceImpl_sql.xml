@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <entry key="getPushInfoMenu"><![CDATA[ SELECT OPERATOR_NO,OPERATOR_NAME,CATEGORY_ID FROM FS_PUSHINFO ORDER BY ORDERBY_NO ]]></entry>
+  <entry key="savePushInfoMap_delete"><![CDATA[ DELETE FROM FS_PUSHINFO_PSN WHERE OPERATOR_NO='${operator_no}' ]]></entry>
+  <entry key="savePushInfoMap_insert"><![CDATA[ INSERT INTO FS_PUSHINFO_PSN (OPERATOR_NO, USERID, DEPTID) VALUES ('${operator_no}','${userId}','${deptId}') ]]></entry>
+</properties>

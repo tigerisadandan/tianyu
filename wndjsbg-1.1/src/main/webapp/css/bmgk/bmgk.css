@@ -1,0 +1,38 @@
+body {font-size:14px;}
+h2 {display:inline; line-height:2em;}
+.table2 {
+	border-left: #000 solid 1px;
+	border-top: #000 solid 1px;
+	margin:10px auto;
+}
+.marginBottom15px {margin-bottom:15px;}
+.table2 tr td,.table2 tr th {
+	line-height: 1.5em;
+	padding: 4px;
+	border-right: #000 solid 1px;
+	border-bottom: #000 solid 1px;
+}
+input[type='text'] {
+	vertical-align: middle;
+	height: 20px;
+	line-height: 16px;
+	padding: 2px;
+}
+.table1 {
+}
+.table1 tr td,.table1 tr th {
+	line-height: 1.5em;
+	padding: 4px;
+	border-right: #000 solid 0;
+	border-bottom: #000 solid 0;
+}
+.table3 {
+}
+.table3 tr td,.table3 tr th {
+	line-height: 1.5em;
+	padding: 4px;
+	border-right: #000 solid 0;
+	border-bottom: #000 solid 0;
+}
+.table3 tr th {/* border-top: #000 solid 1px; border-bottom: #000 solid 1px; */}
+.B-small-from-table-auto h4{padding:10px;}

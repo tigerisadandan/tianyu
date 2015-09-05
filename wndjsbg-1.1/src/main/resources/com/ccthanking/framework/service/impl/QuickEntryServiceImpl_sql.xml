@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <entry key="getQuickEntryTree">
+  	<![CDATA[ 
+  		SELECT T.ID, T.NAME, T.PARENTID,M.ROLEID FROM  
+  		(SELECT CATEGORY_ID ID,CATEGORY_NAME NAME, '0' PARENTID 
+  		FROM FS_QUICKENTRY GROUP BY CATEGORY_ID,CATEGORY_NAME 
+  		UNION ALL
+  		SELECT QUICKENTRY_ID ID, TITLE NAME, CATEGORY_ID PARENTID 
+  		FROM FS_QUICKENTRY) T ,FS_QUICKENTRY_MAP M 
+  		WHERE T.ID=M.QUICKID(+) AND M.ROLEID(+)='${roleId}' ORDER BY PARENTID
+  	]]>
+  </entry>
+  <entry key="awardQuickEntryToRole_delete"><![CDATA[ DELETE FROM FS_QUICKENTRY_MAP WHERE ROLEID='${roleId}' ]]></entry>
+  <entry key="awardQuickEntryToRole_insert"><![CDATA[ INSERT INTO FS_QUICKENTRY_MAP(ROLEID, QUICKID) VALUES ('${roleId}','${quickId[i]}') ]]></entry>
+</properties>

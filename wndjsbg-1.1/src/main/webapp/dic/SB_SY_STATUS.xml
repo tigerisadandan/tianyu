@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<DATA>
+  <R c="AZGC" t="安装过程" s="AZGC" a="" l="1"/>
+  <R c="AZGZ" t="安装告知" s="AZGZ" a="" l="1"/>
+  <R c="CXGC" t="拆卸过程" s="CXGC" a="" l="1"/>
+  <R c="CXGZ" t="拆卸告知" s="CXGZ" a="" l="1"/>
+  <R c="JCYS" t="检测验收" s="JCYS" a="" l="1"/>
+  <R c="SYDJ" t="使用登记" s="SYDJ" a="" l="1"/>
+  <R c="ZXDJ" t="注销登记" s="ZXDJ" a="" l="1"/>
+</DATA>

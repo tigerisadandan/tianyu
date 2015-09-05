@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <entry key="find"><![CDATA[ sqlString ]]></entry>
+  <entry key="find"><![CDATA[ sqlString ]]></entry>
+  <entry key="remove"><![CDATA[ sqlString ]]></entry>
+  <entry key="remove"><![CDATA[ sqlString ]]></entry>
+  <entry key="insert"><![CDATA[ sqlString ]]></entry>
+  <entry key="insert"><![CDATA[ sqlString ]]></entry>
+  <entry key="update"><![CDATA[ sqlString ]]></entry>
+  <entry key="update"><![CDATA[ sqlString ]]></entry>
+  <entry key="insertdemo"><![CDATA[ sqlString ]]></entry>
+  <entry key="updatedemo"><![CDATA[ sqlString ]]></entry>
+  <entry key="deletedemo"><![CDATA[ sqlString ]]></entry>
+  <entry key="updatebatchdemo"><![CDATA[ sqlString ]]></entry>
+  <entry key="queryConditiondemo"><![CDATA[ select * from XMXX" ]]></entry>
+  <entry key="findById"><![CDATA[ sqlString ]]></entry>
+  <entry key="findById"><![CDATA[ sqlString ]]></entry>
+  <entry key="getUserByUsernameAndPassword"><![CDATA[ sqlString ]]></entry>
+  <entry key="queryAttchdemo"><![CDATA[ select fileid, filename, url, zhux, bz, lrr, lrbm, lrsj, gxr, gxbm, gxsj, sjbh, ywlx, fjlx, filesize, ywid, fjzt, glid1, glid2, glid3, glid4, fjlb from fs_fileupload ]]></entry>
+</properties>

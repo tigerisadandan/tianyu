@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<DATA>
+  <R c="WZ" t="外资" s="PRO_TZXZ" a="" l="1"/>
+  <R c="HZ" t="合资" s="PRO_TZXZ" a="" l="1"/>
+  <R c="GY" t="国有" s="PRO_TZXZ" a="" l="1"/>
+  <R c="JT" t="集体" s="PRO_TZXZ" a="" l="1"/>
+  <R c="MY" t="民营" s="PRO_TZXZ" a="" l="1"/>
+  <R c="QT" t="其他" s="PRO_TZXZ" a="" l="1"/>
+</DATA>

@@ -1,0 +1,385 @@
+package com.ccthanking.business.sgenter;
+
+import com.ccthanking.business.sgenter.vo.SgBbPojo;
+import com.ccthanking.business.sgenter.vo.SgBbZygmPojo;
+
+global SgBbPojo retPojo;
+
+//项目名称--->执业规模
+
+//初始
+rule "sg_pbrs_other_m"  
+salience 999  
+no-loop true  
+activation-group "sg_zygm_other"
+when  
+    $inpojo : SgBbZygmPojo()  
+then          
+    retPojo.setJzszygcgmbz(3);//小型
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pbrs_27_d"  
+salience 86  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 27) &&((jzwcs>=25)||(dwkd>=30)||(dwjzmj>=30000)))  
+then          
+    retPojo.setJzszygcgmbz(1);//大型
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pbrs_27_z"  
+salience 85  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 27) &&((jzwcs>=5) || (dwkd>=15) || (dwjzmj>=3000)))  
+then          
+    retPojo.setJzszygcgmbz(2);//中型
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pbrs_27_x"  
+salience 84  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 27) && ((jzwcs<5) && (dwkd<15)  && (dwjzmj<=3000)))  
+then          
+    retPojo.setJzszygcgmbz(3);//小型
+    retPojo.setEnabled(true);
+end 
+
+//房屋建筑工程施工总承包
+rule "sg_pbrs_28_d"  
+salience 83 
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 28) && (jzqjzmj>=100000) )  
+then          
+    retPojo.setJzszygcgmbz(1);//大
+    retPojo.setEnabled(true);
+end 
+
+
+rule "sg_pbrs_28_z"  
+salience 82  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 28) && (jzqjzmj>=3000) )  
+then          
+    retPojo.setJzszygcgmbz(2);//中
+    retPojo.setEnabled(true);
+end 
+
+
+
+rule "sg_pbrs_28_x"  
+salience 81  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 28) && (jzqjzmj<3000) )  
+then          
+    retPojo.setJzszygcgmbz(3);//小
+    retPojo.setEnabled(true);
+end 
+
+
+
+
+//钢结构工程施工总承包
+
+rule "sg_pbrs_29_d"  
+salience 80  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 29) &&((gjgkd>=30)||(zzl>=1000)||(dwjzmj>=20000)))  
+then          
+    retPojo.setJzszygcgmbz(1);//大
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pbrs_29_z"  
+salience 79  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 29) &&((gjgkd>=10)||(zzl>=100)||(dwjzmj>=3000)))  
+then          
+    retPojo.setJzszygcgmbz(2);//中
+    retPojo.setEnabled(true);
+end 
+
+ 
+rule "sg_pbrs_29_x"  
+salience 78  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 29) && ((gjgkd<10)&&(zzl<100)&&(dwjzmj<3000)))  
+then          
+    retPojo.setJzszygcgmbz(3);//小
+    retPojo.setEnabled(true);
+end 
+
+
+
+//金属门窗工程专业承包
+rule "sg_pbrs_30_d"  
+salience 77  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 30) && ((jzwcs>=25)||(dwjzmj>=8000)||(jzmj>=500)) )  
+then          
+    retPojo.setJzszygcgmbz(1);//大
+    retPojo.setEnabled(true);
+end  
+
+rule "sg_pbrs_30_z"  
+salience 76  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 30) && ((jzwcs<25)||(dwjzmj>=1000)||(jzmj>=100)) )  
+then          
+    retPojo.setJzszygcgmbz(2);//中
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pbrs_30_x"  
+salience 75  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 30) && ((jzwcs<5)&&(dwjzmj<1000)&&(jzmj<100)) )  
+then          
+    retPojo.setJzszygcgmbz(3);//小
+    retPojo.setEnabled(true);
+end 
+
+
+
+//建筑装修装饰工程专业承包
+rule "sg_pbrs_31_d"  
+salience 74 
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 31) && (dxgchte>=1000) )  
+then          
+    retPojo.setJzszygcgmbz(1);//大
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pbrs_31_z"  
+salience 73  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 31) && (dxgchte>=100) )  
+then          
+    retPojo.setJzszygcgmbz(2);//中
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pbrs_31_x"  
+salience 72  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 31) && (dxgchte<100) )  
+then          
+    retPojo.setJzszygcgmbz(3);//小
+    retPojo.setEnabled(true);
+end 
+
+//市政公用工程施工总承包
+rule "sg_pbrs_32_d"  
+salience 71  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 32) && ((dxgcmj>=6000)||(dxgcgd>=60)) )  
+then          
+    retPojo.setJzszygcgmbz(1);//大
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pbrs_32_z"  
+salience 70  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 32) && ((dxgcmj<6000)||(dxgcgd<60) ))  
+then          
+    retPojo.setJzszygcgmbz(2);//中
+    retPojo.setEnabled(true);
+end 
+
+
+
+
+
+rule "sg_pbrs_33_z"  
+salience 69  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 33) && (dxgchte<3000) )  
+then          
+    retPojo.setJzszygcgmbz(2);//中
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pbrs_33_d"  
+salience 68  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 33) && (dxgchte>=3000) )  
+then          
+    retPojo.setJzszygcgmbz(1);//大
+    retPojo.setEnabled(true);
+end 
+
+
+//市政公用工程施工总承包
+
+rule "sg_pbrs_34_d"  
+salience 67  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 34) && (dxgchte>=1000) )  
+then          
+    retPojo.setJzszygcgmbz(1);//大
+    retPojo.setEnabled(true);
+end  
+
+rule "sg_pbrs_34_z"  
+salience 66 
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 34) && (dxgchte>=500) )  
+then          
+    retPojo.setJzszygcgmbz(2);//中
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pbrs_34_x"  
+salience 65  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 34) && (dxgchte<500) )  
+then          
+    retPojo.setJzszygcgmbz(3);//小
+    retPojo.setEnabled(true);
+end 
+
+
+
+//机电设备安装工程专业承包
+rule "sg_pbrs_36_d"  
+salience 64  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 36) && (dxgchte>1500) )  
+then          
+    retPojo.setJzszygcgmbz(1);//大
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pbrs_36_z"  
+salience 63  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 36) && (dxgchte>=200) )  
+then          
+    retPojo.setJzszygcgmbz(2);//中
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pbrs_36_x"  
+salience 62  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 36) && (dxgchte<200) )  
+then          
+    retPojo.setJzszygcgmbz(3);//小
+    retPojo.setEnabled(true);
+end 
+
+
+
+//建筑智能化工程专业承包
+
+
+rule "sg_pbrs_37_z"  
+salience 61  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 37) && (dxgchte>=200) )  
+then          
+    retPojo.setJzszygcgmbz(2);//zhong
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pbrs_37_x"  
+salience 60  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 37) && (dxgchte<200) )  
+then          
+    retPojo.setJzszygcgmbz(3);//小
+    retPojo.setEnabled(true);
+end 
+
+
+//消防设施工程设计与施工资质
+
+rule "sg_pbrs_38_d"  
+salience 59 
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 38)  &&(dwjzmj>20000))  
+then          
+    retPojo.setJzszygcgmbz(1);//大
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pbrs_38_z"  
+salience 58  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 38) &&(dwjzmj>=100000))  
+then          
+    retPojo.setJzszygcgmbz(2);//中
+    retPojo.setEnabled(true);
+end 
+
+rule "sg_pbrs_38_x"  
+salience 57  
+no-loop true  
+activation-group "sg_zygm"
+when  
+    $inpojo : SgBbZygmPojo((gclx == 38) &&(dwjzmj<10000))  
+then          
+    retPojo.setJzszygcgmbz(3);//小
+    retPojo.setEnabled(true);
+end

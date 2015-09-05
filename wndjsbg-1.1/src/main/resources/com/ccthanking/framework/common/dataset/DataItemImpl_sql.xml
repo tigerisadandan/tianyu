@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <entry key="getValue">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="setReadOnly">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="isReadOnly">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="getNewValue">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="setNewValue">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="setOriValue">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="isModified">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="acceptChanges">&lt;![CDATA[ sqlString ]]&gt;</entry>
+  <entry key="cancelUpdate">&lt;![CDATA[ sqlString ]]&gt;</entry>
+</properties>
